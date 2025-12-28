@@ -43,10 +43,9 @@
                 <div class="hero-content-wrapper">
                     <div class="hero-text-block">
                         <span class="hero-subtitle">Welcome</span>
-                        <h1 class="hero-title">Dr. Laxmikant Pandey</h1>
-                        <h2 class="hero-designation">Also known as <span class="highlight">Seedman of India</span></h2>
-                        <p class="hero-desc">Pioneering the hybrid seed revolution and transforming agriculture through
-                            innovation and dedication.</p>
+                        <h1 class="hero-title">Seedman Of India</h1>
+                        <h2 class="hero-designation">Also known as <span class="highlight">Dr. Laxmikant Pandey</span></h2>
+                        <p class="hero-desc">Dr. Lakshmikant Pandey, widely known as “The Seedman,” is a visionary agribusiness leader driving innovation in India’s seed industry through sustainable agriculture, hybrid seeds, and farmer empowerment.</p>
                         <a href="biography.html" class="btn">Read Biography</a>
                     </div>
                     <div class="hero-image-block">
@@ -54,18 +53,21 @@
                             <div class="carousel-track-container">
                                 <ul class="carousel-track">
                                     <li class="carousel-slide current-slide">
-                                        <div class="slide-content" style="background-color: #4CAF50;">
-                                            <span class="slide-caption">High Yield Hybrid Seeds</span>
+                                        <div class="slide-content">
+                                            <img class="slide-image" src="images/image_3.jpg" alt="Seedman of India">
+                                            <span class="slide-caption">Seedman of India</span>
                                         </div>
                                     </li>
                                     <li class="carousel-slide">
-                                        <div class="slide-content" style="background-color: #8BC34A;">
-                                            <span class="slide-caption">Sustainable Farming</span>
+                                        <div class="slide-content">
+                                            <img class="slide-image" src="images/image_2.jpg" alt="Agribusiness Leader">
+                                            <span class="slide-caption">Agribusiness Leader</span>
                                         </div>
                                     </li>
                                     <li class="carousel-slide">
-                                        <div class="slide-content" style="background-color: #CDDC39;">
-                                            <span class="slide-caption">Empowering Farmers</span>
+                                        <div class="slide-content">
+                                            <img class="slide-image" src="images/image_1.jpg" alt="Agriculture Champion">
+                                            <span class="slide-caption">Agriculture Champion</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -196,6 +198,50 @@
                 min-height: 300px;
                 order: 1;
             }
+        }
+
+        /* Carousel image styles */
+        .carousel {
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-caption {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.45);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
         }
     </style>
 </body>

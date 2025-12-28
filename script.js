@@ -69,6 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
             targetDot.classList.add('current-slide');
         };
 
+        const nextSlide = () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const nextSlideEl = currentSlide.nextElementSibling;
+            const currentDot = dotsNav.querySelector('.current-slide');
+
+            if (nextSlideEl) {
+                const nextDot = currentDot.nextElementSibling;
+                moveToSlide(track, currentSlide, nextSlideEl);
+                updateDots(currentDot, nextDot);
+            } else {
+                // Loop to first slide
+                const firstSlide = slides[0];
+                const firstDot = dots[0];
+                moveToSlide(track, currentSlide, firstSlide);
+                updateDots(currentDot, firstDot);
+            }
+        };
+
         // Initialize buttons
         prevButton.classList.remove('is-hidden');
         nextButton.classList.remove('is-hidden');
@@ -93,23 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Click Right
-        nextButton.addEventListener('click', e => {
-            const currentSlide = track.querySelector('.current-slide');
-            const nextSlide = currentSlide.nextElementSibling;
-            const currentDot = dotsNav.querySelector('.current-slide');
-
-            if (nextSlide) {
-                const nextDot = currentDot.nextElementSibling;
-                moveToSlide(track, currentSlide, nextSlide);
-                updateDots(currentDot, nextDot);
-            } else {
-                // Loop to first slide
-                const firstSlide = slides[0];
-                const firstDot = dots[0];
-                moveToSlide(track, currentSlide, firstSlide);
-                updateDots(currentDot, firstDot);
-            }
-        });
+        nextButton.addEventListener('click', () => nextSlide());
 
         // Click Nav Indicators
         dotsNav.addEventListener('click', e => {
@@ -131,5 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentSlide = track.querySelector('.current-slide');
             track.style.transform = 'translateX(-' + currentSlide.style.left + ')';
         });
+
+        // Auto-scroll every 5 seconds
+        setInterval(nextSlide, 5000);
     });
 });
