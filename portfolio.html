@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dr. Laxmikant Pandey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portfolio-section {
+            padding: 4rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .p-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        .p-content {
+            padding: 1.5rem;
+        }
+
+        .p-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-green);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mobile-header">
+        <div class="mobile-logo">Seedman of India</div>
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-close" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+            <li><a href="biography.html" class="mobile-nav-item">Biography</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+            <li><a href="blogs.html" class="mobile-nav-item">Blogs</a></li>
+            <li><a href="contact.html" class="mobile-nav-item">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="app-container">
+        <main class="main-content">
+            <section class="portfolio-section">
+                <span class="section-subtitle">Innovations</span>
+                <h1 class="section-title">Featured Work & Research</h1>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="p-img">Image: Hybrid Cotton</div>
+                        <div class="p-content">
+                            <h3 class="p-title">Hybrid Cotton 456</h3>
+                            <p>Revolutionary high-yield cotton variety resistant to common pests.</p>
+                            <a href="#"
+                                style="display:inline-block; margin-top:10px; color:var(--primary-green); font-weight:600;">Read
+                                Full Article &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="p-img">Image: Golden Maize</div>
+                        <div class="p-content">
+                            <h3 class="p-title">Golden Maize</h3>
+                            <p>Drought-resistant maize strain developed for arid regions.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="p-img">Image: Organic Pesticides</div>
+                        <div class="p-content">
+                            <h3 class="p-title">Organic Solutions</h3>
+                            <p>Research into scalable organic pest control for small farmers.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="p-img">Image: Wheat Research</div>
+                        <div class="p-content">
+                            <h3 class="p-title">Wheat Strain X</h3>
+                            <p>Nutrient-fortified wheat providing essential minerals.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-home nav-icon"></i><span
+                            class="nav-tooltip">Home</span></a></li>
+                <li><a href="biography.html" class="nav-item"><i class="fas fa-user nav-icon"></i><span
+                            class="nav-tooltip">Biography</span></a></li>
+                <li><a href="portfolio.html" class="nav-item active"><i class="fas fa-seedling nav-icon"></i><span
+                            class="nav-tooltip">Portfolio</span></a></li>
+                <li><a href="blogs.html" class="nav-item"><i class="fas fa-newspaper nav-icon"></i><span
+                            class="nav-tooltip">Blogs</span></a></li>
+                <li><a href="contact.html" class="nav-item"><i class="fas fa-envelope nav-icon"></i><span
+                            class="nav-tooltip">Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

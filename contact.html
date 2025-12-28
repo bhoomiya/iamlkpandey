@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dr. Laxmikant Pandey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Make contact-section span full viewport width while keeping content centered */
+        .contact-section {
+            padding: 6rem 0;
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            position: relative;
+            background-image: url('images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 0;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* subtle dark overlay for readable text over image */
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+            z-index: 0;
+        }
+
+        /* Inner wrapper to constrain readable content while bg stays full-width */
+        .contact-section .contact-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-inner .section-title {
+            color: #ffffff;
+        }
+
+        .contact-inner .section-subtitle {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            background: #ffffff;
+            color: #222;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mobile-header">
+        <div class="mobile-logo">Seedman of India</div>
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-close" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+            <li><a href="biography.html" class="mobile-nav-item">Biography</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+            <li><a href="blogs.html" class="mobile-nav-item">Blogs</a></li>
+            <li><a href="contact.html" class="mobile-nav-item">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="app-container">
+        <main class="main-content">
+            <section class="contact-section">
+                <div class="contact-inner">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h1 class="section-title">Contact Dr. Pandey</h1>
+                    <p>Have a question or proposal? Reach out to us.</p>
+
+                    <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Message sent (demo)!');">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="social-links-container" style="text-align: center; margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--primary-green);">Follow Us</h3>
+                    <div class="social-icons" style="font-size: 2rem;">
+                        <a href="#" style="margin: 0 10px; color: var(--accent-gold);"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" style="margin: 0 10px; color: var(--accent-gold);"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" style="margin: 0 10px; color: var(--accent-gold);"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" style="margin: 0 10px; color: var(--accent-gold);"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-home nav-icon"></i><span
+                            class="nav-tooltip">Home</span></a></li>
+                <li><a href="biography.html" class="nav-item"><i class="fas fa-user nav-icon"></i><span
+                            class="nav-tooltip">Biography</span></a></li>
+                <li><a href="portfolio.html" class="nav-item"><i class="fas fa-seedling nav-icon"></i><span
+                            class="nav-tooltip">Portfolio</span></a></li>
+                <li><a href="blogs.html" class="nav-item"><i class="fas fa-newspaper nav-icon"></i><span
+                            class="nav-tooltip">Blogs</span></a></li>
+                <li><a href="contact.html" class="nav-item active"><i class="fas fa-envelope nav-icon"></i><span
+                            class="nav-tooltip">Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

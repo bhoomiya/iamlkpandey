@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography - Dr. Laxmikant Pandey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bio-section {
+            padding: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .bio-header {
+            margin-bottom: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            margin-top: 3rem;
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 2rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 5px;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--primary-green);
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .year {
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .role-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mobile-header">
+        <div class="mobile-logo">Seedman of India</div>
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-close" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+            <li><a href="biography.html" class="mobile-nav-item">Biography</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+            <li><a href="blogs.html" class="mobile-nav-item">Blogs</a></li>
+            <li><a href="contact.html" class="mobile-nav-item">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="app-container">
+        <main class="main-content">
+            <section class="bio-section">
+                <div class="bio-header">
+                    <span class="section-subtitle">About Me</span>
+                    <h1 class="section-title">A Life Dedicated to Agriculture</h1>
+                    <p style="margin-top: 1rem; font-size: 1.1rem; color: #555;">
+                        Dr. Laxmikant Pandey is a visionary scientist and entrepreneur who has revolutionized the Indian
+                        hybrid seed industry. His journey from a passionate researcher to the "Seedman of India" is a
+                        testament to innovation and resilience.
+                    </p>
+                </div>
+
+                <div class="bio-carousel-container"
+                    style="margin: 3rem 0; height: 400px; position: relative; overflow: hidden; border-radius: 10px;">
+                    <div class="carousel">
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <li class="carousel-slide current-slide">
+                                    <div class="slide-content" style="background-color: #795548;">
+                                        <span class="slide-caption">Early Field Work</span>
+                                    </div>
+                                </li>
+                                <li class="carousel-slide">
+                                    <div class="slide-content" style="background-color: #6D4C41;">
+                                        <span class="slide-caption">Lab Research 1995</span>
+                                    </div>
+                                </li>
+                                <li class="carousel-slide">
+                                    <div class="slide-content" style="background-color: #5D4037;">
+                                        <span class="slide-caption">Award Ceremony 2010</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="carousel-button carousel-button--left is-hidden">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button carousel-button--right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <div class="carousel-nav">
+                            <button class="carousel-indicator current-slide"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="year">2020 - Present</span>
+                        <h3 class="role-title">Leading Sustainable Innovation</h3>
+                        <p>Spearheading new research in climate-resilient crops and sustainable farming practices across
+                            India.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2010 - 2020</span>
+                        <h3 class="role-title">Expansion & Global Recognition</h3>
+                        <p>Expanded operations to 15+ countries. Recognized with multiple awards for contributions to
+                            Food Security.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">1995 - 2010</span>
+                        <h3 class="role-title">The Foundation Years</h3>
+                        <p>Established core research facilities and released the first breakthrough hybrid cotton seeds.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">1990</span>
+                        <h3 class="role-title">Ph.D in Genetics</h3>
+                        <p>Completed doctoral research focusing on plant genetics and breeding techniques.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-home nav-icon"></i><span
+                            class="nav-tooltip">Home</span></a></li>
+                <li><a href="biography.html" class="nav-item active"><i class="fas fa-user nav-icon"></i><span
+                            class="nav-tooltip">Biography</span></a></li>
+                <li><a href="portfolio.html" class="nav-item"><i class="fas fa-seedling nav-icon"></i><span
+                            class="nav-tooltip">Portfolio</span></a></li>
+                <li><a href="blogs.html" class="nav-item"><i class="fas fa-newspaper nav-icon"></i><span
+                            class="nav-tooltip">Blogs</span></a></li>
+                <li><a href="contact.html" class="nav-item"><i class="fas fa-envelope nav-icon"></i><span
+                            class="nav-tooltip">Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

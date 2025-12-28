@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Dr. Laxmikant Pandey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-section {
+            padding: 4rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mobile-header">
+        <div class="mobile-logo">Seedman of India</div>
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-close" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+            <li><a href="biography.html" class="mobile-nav-item">Biography</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+            <li><a href="blogs.html" class="mobile-nav-item">Blogs</a></li>
+            <li><a href="contact.html" class="mobile-nav-item">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="app-container">
+        <main class="main-content">
+            <section class="blog-section">
+                <span class="section-subtitle">Insights</span>
+                <h1 class="section-title">Latest Articles & News</h1>
+
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img">Image: Sustainable Farming</div>
+                        <div class="blog-content">
+                            <span class="blog-date">Dec 10, 2024</span>
+                            <h3 class="blog-title">The Future of Sustainable Farming in India</h3>
+                            <p class="blog-excerpt">Exploring how modern techniques can preserve soil health while
+                                maximizing yield for smallholder farmers.</p>
+                            <a href="#" class="read-more">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-img">Image: Climate Resilience</div>
+                        <div class="blog-content">
+                            <span class="blog-date">Nov 28, 2024</span>
+                            <h3 class="blog-title">Building Climate Resilience with Hybrid Seeds</h3>
+                            <p class="blog-excerpt">How new hybrid varieties are combatting the effects of erratic
+                                weather patterns across the subcontinent.</p>
+                            <a href="#" class="read-more">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-img">Image: Agri-Tech</div>
+                        <div class="blog-content">
+                            <span class="blog-date">Oct 15, 2024</span>
+                            <h3 class="blog-title">Role of Technology in Modern Agriculture</h3>
+                            <p class="blog-excerpt">From drones to data analytics, technology is reshaping the landscape
+                                of Indian agriculture.</p>
+                            <a href="#" class="read-more">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-home nav-icon"></i><span
+                            class="nav-tooltip">Home</span></a></li>
+                <li><a href="biography.html" class="nav-item"><i class="fas fa-user nav-icon"></i><span
+                            class="nav-tooltip">Biography</span></a></li>
+                <li><a href="portfolio.html" class="nav-item"><i class="fas fa-seedling nav-icon"></i><span
+                            class="nav-tooltip">Portfolio</span></a></li>
+                <li><a href="blogs.html" class="nav-item active"><i class="fas fa-newspaper nav-icon"></i><span
+                            class="nav-tooltip">Blogs</span></a></li>
+                <li><a href="contact.html" class="nav-item"><i class="fas fa-envelope nav-icon"></i><span
+                            class="nav-tooltip">Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
